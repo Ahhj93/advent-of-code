@@ -1,7 +1,7 @@
 import re
 
 def problem1():
-    input_text_file = open("puzzle.txt", "r")
+    input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
     somme_calibration : int = 0
 
@@ -18,7 +18,7 @@ def problem1():
 number : list = [None, "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 def problem2():
-    input_text_file = open("puzzle2.txt", "r")
+    input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
     somme_calibration : int = 0
     for item in input_list:

@@ -12,7 +12,7 @@ def parse_input(input: str) -> list:
     return (id_game, list)
 
 def main1() -> int:
-    input_text_file = open("puzzle.txt", "r")
+    input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
     possible_games: list = []
     for line in input_list:
@@ -30,7 +30,7 @@ def main1() -> int:
     return sum(possible_games)
 
 def main2() -> int:
-    input_text_file = open("puzzle.txt", "r")
+    input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
     ensemble: list = []
     for line in input_list:
