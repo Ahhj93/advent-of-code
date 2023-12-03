@@ -17,8 +17,8 @@ def problem2():
     input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
 
-    somme_calibration = 0
-    numbers_spelled = {
+    somme_calibration: int = 0
+    numbers_spelled: dict = {
         "one": "1",
         "two": "2",
         "three": "3",
@@ -30,10 +30,10 @@ def problem2():
         "nine": "9",
     }
 
-    digits = "0123456789"
+    digits: str = "0123456789"
 
     for item in input_list:
-        numbers = []
+        numbers: list = []
         for value in digits:
             index = item.find(value)
             if index != -1:

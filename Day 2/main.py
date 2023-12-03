@@ -31,7 +31,7 @@ def main1() -> int:
 
 def main2() -> int:
     input_text_file = open("input.txt", "r")
-    input_list : list  = input_text_file.read().split("\n")
+    input_list: list  = input_text_file.read().split("\n")
     ensemble: list = []
     for line in input_list:
         _, list = parse_input(line)
