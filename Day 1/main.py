@@ -14,7 +14,7 @@ def problem1():
     print(somme_calibration)
 
 def problem2():
-    input_text_file = open("test.txt", "r")
+    input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
 
     somme_calibration = 0
