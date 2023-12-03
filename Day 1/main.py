@@ -11,7 +11,7 @@ def problem1():
         nombre_str = nombre_str[0] + nombre_str[-1]
         somme_calibration += int(nombre_str)
 
-    print(somme_calibration)
+    return somme_calibration
 
 def problem2():
     input_text_file = open("input.txt", "r")
