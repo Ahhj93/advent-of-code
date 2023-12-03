@@ -55,6 +55,6 @@ def problem2():
     return somme_calibration
 
 if __name__ == "__main__":
-    print("--- Day 1: --- Day 1: Trebuchet?! --- ---")
+    print("--- Day 1: Trebuchet?! ---")
     print(f"Part One: {problem1()}")
     print(f"Part Two: {problem2()}")
