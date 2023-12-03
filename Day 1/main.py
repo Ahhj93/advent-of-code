@@ -1,4 +1,4 @@
-def problem1():
+def problem1() -> int:
     input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
     somme_calibration : int = 0
@@ -13,7 +13,7 @@ def problem1():
 
     return somme_calibration
 
-def problem2():
+def problem2() -> int:
     input_text_file = open("input.txt", "r")
     input_list : list  = input_text_file.read().split("\n")
 
