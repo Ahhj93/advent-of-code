@@ -4,16 +4,15 @@ def parse_input(input: str) -> list:
         "A": "a",
         "K" : "b",
         "Q" : "c",
-        "J" : "d",
-        "T" : "e",
-        "9" : "f",
-        "8" : "g",
-        "7" : "h",
-        "6" : "i",
-        "5" : "j",
-        "4" : "k",
-        "3" : "l",
-        "2" : "m"
+        "T" : "d",
+        "9" : "e",
+        "8" : "f",
+        "7" : "g",
+        "6" : "h",
+        "5" : "i",
+        "4" : "j",
+        "3" : "k",
+        "2" : "l"
     }
     card2int: str = ""
     for card in hand[0]:
@@ -24,7 +23,13 @@ def parse_input(input: str) -> list:
 
 def five_of_a_kind(cards: str) -> bool:
     # where all five cards have the same label
-    return cards.count(cards[0]) == 5
+    if cards.count(cards[0]) == 5:
+        return (True, cards)
+    else:
+        for card in cards:
+            if cards.count(card) == 4 and cards.count("J") == 1:
+                cards = cards.replace("J", card)
+                return (True, cards)
 
 def four_of_a_kind(cards: str) -> bool:
     # where four cards have the same label and one card has a different label
