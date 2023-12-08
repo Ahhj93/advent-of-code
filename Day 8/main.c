@@ -1,3 +1,4 @@
+// NOT FINISHED
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -5,19 +6,15 @@
 #include <unistd.h>
 
 struct Node {
-    char* value;
+    char value[3];
     struct Node* right;
-    struct Node* left
+    struct Node* left;
 };
 
 typedef struct Node node;
 
-bool is_zzz(char* str) {
-    if (strlen(str) != 3) return false;
-    if (str[0] != 'z') return false;
-    if (str[1] != 'z') return false;
-    if (str[2] != 'z') return false;
-    return true;
+bool is_zzz(char* value) {
+    return strcmp(value, "ZZZ") == 0;
 }
 
 int to_zzz(node* begin, char* str) {
@@ -52,33 +49,13 @@ GGG = (GGG, GGG)
 ZZZ = (ZZZ, ZZZ)
 */
 
-void parse_input(node* begin) {
-    FILE* file = fopen("test.txt", "r");
-    char* line = NULL;
-    size_t len = 0;
-    ssize_t read;
-    node* current = begin;
-    while ((read = getline(&line, &len, file)) != -1) {
-        char* token = strtok(line, " =");
-        char* value = strtok(NULL, " =");
-        current->value = token;
-        if (value != NULL) {
-            if (value[0] == '(') {
-                node* left = malloc(sizeof(node));
-                node* right = malloc(sizeof(node));
-                current->left = left;
-                current->right = right;
-                parse_input(left);
-                parse_input(right);
-            }
-        }
-        current = current->right;
-    }
-    fclose(file);
+void parse_input(node* begin, char* instructions) {
+
 }
 
 int main() {
     node* begin = malloc(sizeof(node));
+    char* instructions = malloc(sizeof(char) * 100);
     parse_input(begin);
     printf("%d\n", to_zzz(begin, "RL"));
     return 0;
